@@ -34,7 +34,7 @@ jobs:
     - name: Build, unit tests and integration tests
       run: |
         chmod +x gradlew 
-        ./gradlew build #Runs the Gradle build task, which compiles the codebase and runs unit and integration tests
+        ./gradlew build
 #Ensures the Gradle wrapper is executable, solving Windows incompatibilities
 #Runs the Gradle build task, which compiles the codebase and runs unit and integration tests
 
