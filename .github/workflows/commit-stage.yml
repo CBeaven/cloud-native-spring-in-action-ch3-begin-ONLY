@@ -1,13 +1,14 @@
 name: Commit Stage # The name of the workflow
 on: push # The workflow is triggered when new code is pushed to the repository
 
+permissions: #  The permissions granted to the job
+      contents: read # Permission to check out the current Git repository
+      security-events: write # Permission to submit security events to GitHub
+      
 jobs:
   build: # The job’s unique identifier
     name: Build and Test # The type of machine where the job should be run
-    runs-on: ubuntu-22.04 # A human-friendly name for the job
-    permissions: #  The permissions granted to the job
-      contents: read # Permission to check out the current Git repository
-      security-events: write # Permission to submit security events to GitHub
+    runs-on: ubuntu-22.04 # A human-friendly name for the job  
     steps:
     - name: Checkout source code
       uses: actions/checkout@v3 #Checks out the current Git repository (catalog-service) (with current line above)
