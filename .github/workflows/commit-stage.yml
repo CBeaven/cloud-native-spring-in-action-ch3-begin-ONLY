@@ -1,5 +1,8 @@
 name: Commit Stage # The name of the workflow
-on: push # The workflow is triggered when new code is pushed to the repository
+on: 
+  push: # The workflow is triggered when new code is pushed to the repository
+    paths:
+    - 'catalog-service'
 
 jobs:
   build: # The job’s unique identifier
