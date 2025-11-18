@@ -26,7 +26,7 @@ jobs:
         severity-cutoff: high #The minimum security category to be considered as an error (low, medium, high, critical)
         acs-report-enable: true #Whether to enable the generation of a report after the scan is completed
     - name: Upload vulnerability report
-      uses: github/codeql-action/upload-sarif@v2 #Uploads the security vulnerability report to GitHub (SARIF format)
+      uses: github/codeql-action/upload-sarif@v3 #Uploads the security vulnerability report to GitHub (SARIF format)
       if: success() || failure() #Uploads the report even if the previous step fails
       with:
         sarif_file: ${{ steps.scan.outputs.sarif }} #Fetches the report from the output of the previous step
